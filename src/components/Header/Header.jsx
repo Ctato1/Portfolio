@@ -1,8 +1,8 @@
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row} from "reactstrap";
 import Logo from "../../assets/images/logo.png";
 import './header.css'
 
-import {  useEffect, useRef } from "react";
+import {  useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import toast from "react-hot-toast";
@@ -27,23 +27,6 @@ const Header = () => {
     },
   ];
   const logoRef = useRef(null);
-  // const stickyLogoFunc = () => {
-  //   window.addEventListener("scroll", () => {
-  //     if (
-  //       document.body.scrollTop > 80 ||
-  //       document.documentElement.scrollTop > 80
-  //     ) {
-  //       logoRef.current.classList.add("sticky__logo");
-  //     } else {
-  //       logoRef.current.classList.remove("sticky__logo");
-  //     }
-  //   });
-  // };
-  // useEffect(() => {
-  //   stickyLogoFunc();
-
-  //   return () => window.removeEventListener("scroll", stickyLogoFunc);
-  // }, []);
 
 
   const barRef = useRef(null);

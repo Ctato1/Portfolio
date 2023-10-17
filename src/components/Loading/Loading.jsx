@@ -1,4 +1,4 @@
-import { useState, CSSProperties } from "react";
+import { CSSProperties } from "react";
 import CircleLoader from "react-spinners/CircleLoader";
 
 const override: CSSProperties = {
@@ -9,8 +9,8 @@ const override: CSSProperties = {
 };
 
 function Loading() {
-  let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#0dcaf0");
+  let loading = true
+  let color= "#0dcaf0"
 
   return (
     <div className="sweet-loading">
