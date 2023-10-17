@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 
 import "../styles/hero.css";
@@ -6,7 +6,6 @@ import ProfImg1 from "../assets/images/prf.jpg";
 import ProfImg2 from "../assets/images/prf2.jpg";
 
 const Hero = () => {
-  const [shown, setShown] = useState(false);
   const [isImage, setIsImage] = useState(true);
 
   return (
