@@ -1,0 +1,51 @@
+
+.form{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+.email-username{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.form__line input{
+    display: flex;
+    width: 99%;
+    gap: 1rem;
+    justify-content: center;
+    margin: auto;
+    outline: none;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+.form__line textarea{
+    border: 1px solid transparent;
+    outline: none;
+    width: 100%;
+    letter-spacing: .01rem;
+    border-radius: 10px;
+    padding: 4px 10px;
+    display: flex;
+    margin: 10px auto;
+
+}
+.form button{
+    color: aliceblue;
+    border: 1px solid #fff;
+    padding: 4px 19px;
+    display: flex;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    width: 100%;
+    margin: auto;
+}
+.form button:hover{
+    color: var(--selected-color);
+    border: 1px solid var(--selected-color);
+}

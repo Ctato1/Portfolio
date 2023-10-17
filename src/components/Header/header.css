@@ -1,0 +1,206 @@
+.header {
+    background: var(--nigh-color);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0px 6px 20px -8px rgba(13, 202, 240, 0.65);
+    -webkit-box-shadow: 0px 6px 20px -8px rgba(13, 202, 240, 0.65);
+    -moz-box-shadow: 0px 6px 20px -8px rgba(13, 202, 240, 0.65);
+  }
+
+  
+  .nav__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .logo{
+    position: absolute;
+    left: 0;
+    transition: .3s ease-in-out;
+  }
+  .nav-res{
+    position: absolute;
+    right: 0;
+  }
+  .logo img {
+    cursor: pointer;
+    box-shadow: 0px -3px 10px 0px rgba(13, 202, 240, 0.69);
+    -webkit-box-shadow: 0px -2px 12px 0px rgba(13, 202, 240, 0.69);
+    -moz-box-shadow: 0px -1px 26px 0px rgba(13, 202, 240, 0.69);
+    border-radius: 50%;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .nav-res {
+    display: flex;
+    gap: 4rem;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--textNight-color);
+    transition: 0.3s ease-in-out;
+    padding: 3px;
+    transform: translateY(0px);
+  }
+  .nav-links a:hover {
+    font-size: 0.98rem;
+    transform: translateY(-5px);
+    color: var(--selected-color);
+  }
+  
+  .header-resume a button {
+    text-decoration: none;
+    box-shadow: 5px 4px 26px -12px rgba(13, 202, 240, 0.59);
+    -webkit-box-shadow: 5px 4px 26px -12px rgba(13, 202, 240, 0.59);
+    -moz-box-shadow: 5px 4px 26px -12px rgba(13, 202, 240, 0.59);
+  }
+
+  .bar-links {
+    display: none;
+    height: 28px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .bar {
+    border-radius: 5px;
+    height: 6px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .bar:nth-child(1) {
+    top: 0%;
+    transform: scaleY(0.9);
+  }
+  .bar:nth-child(2) {
+    top: 50%;
+    transform: scaleX(0.8) scaleY(0.9) translateY(-50%);
+  
+    transform-origin: right;
+  }
+  .bar:nth-child(3) {
+    top: 100%;
+    transform: scaleX(1) scaleY(0.9) translateY(-100%);
+    transform-origin: right;
+  }
+  
+  .bar-links.active .bar {
+    transform-origin: center;
+    background-color: var(--selected-color) !important;
+    top: 50%;
+    right: 2px;
+  }
+  .bar-links.active .bar:nth-child(1) {
+    transform: scale(0.6) rotate(35deg) translateY(-80%) translateX(35%);
+  }
+  .bar-links.active .bar:nth-child(2) {
+    transform: scale(0);
+  }
+  .bar-links.active .bar:nth-child(3) {
+    transform: scale(0.6) rotate(-35deg) translateY(80%) translateX(10%);
+  }
+
+  /* .sticky__logo{
+    height: 80px !important;
+    line-height: 80px;
+    z-index: 9;
+    transition: 0.5s;
+    animation: stickyheader 0.5s forwards;
+  }
+  @keyframes stickyheader {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+       position: fixed !important;
+       transform: translateX(-40%);
+
+    }
+  }
+   */
+  @media only screen and (max-width: 768px) {
+    .logo {
+      position: absolute;
+      left: 20px;
+      width: 120px;
+    }
+    .nav-res {
+      display: none;
+      position: fixed;
+      top: 100px;
+      bottom: 0;
+      left: 0;
+      background: #000000a9;
+      width: 150%;
+      z-index: 1;
+      transition: 0.3s ease-in-out;
+      animation: transitionRes .8s ease-in-out;
+    }
+    @keyframes transitionRes {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateY(0%);
+      }
+    }
+    .nav-links {
+      position: fixed;
+      top: 0%;
+      left: 0;
+      right: 60%;
+      bottom: 0%;
+      font-size: 2rem;
+      flex-direction: column;
+      z-index: 3;
+      background: var(--nigh-color);
+      transition: 0.3s ease-in-out;
+      animation: transitionLinks 0.6s ease-in-out;
+    }
+    @keyframes transitionLinks {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0%);
+      }
+    }
+    .header-resume {
+      /* position: fixed;
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      bottom: 130px;
+      z-index: 9;
+      transform: scale(0.7); */
+      transform: scale(0.8);
+    }
+  
+    .bar-links {
+      display: block;
+      right: 20px;
+    }
+  
+    .active__header-links {
+      transition: 0.3s;
+      display: flex;
+      transform: translateY(0%);
+    }
+  }

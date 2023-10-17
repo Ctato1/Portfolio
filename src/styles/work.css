@@ -1,0 +1,54 @@
+
+
+.work__category{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.work__category .all__btn{
+    padding: 6px 16px;
+    border: 1px solid var(--selected-color);
+    color: var(--day-color);
+    font-size: 1.14rem;
+    border-radius: 30px;
+    background-color: transparent;
+    transition: .3s ease-in-out;
+
+}
+.work__category .all__btn:hover{
+    background-color: var(--selected-color);
+    color: var(--nigh-color);
+    border: 1px solid #fff;
+    font-weight: 500;
+}
+
+.work__category .workBtnActive{
+    background-color: var(--selected-color);
+    color: var(--nigh-color);
+    border: 1px solid #fff;
+    font-weight: 500;
+}
+@media only screen and (max-width: 768px){
+    .work__category{
+        gap: 1rem;
+    }
+    .work__category .all__btn{
+        padding: 3px 10px;
+        font-size: .9rem;
+    
+    }
+}
+
+@media only screen and (max-width: 325px){
+    .work__category{
+        gap: .6rem;
+    }
+    .work__category .all__btn{
+        padding: 3px 10px;
+        font-size: .7rem;
+    
+    }
+}

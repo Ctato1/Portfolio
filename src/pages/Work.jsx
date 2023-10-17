@@ -1,0 +1,96 @@
+import { useState, useEffect } from "react";
+import { Container, Row, Col } from "reactstrap";
+import "../styles/work.css";
+
+import products from "../assets/data/work-data";
+import WorkCard from "../components/UI/WorkCard";
+
+const Work = () => {
+  console.log(products);
+
+  const [category, setCategory] = useState("ALL");
+  const [allProducts, setAllProducts] = useState(products);
+
+  useEffect(() => {
+    if (category === "ALL") {
+      setAllProducts(products);
+    }
+    if (category === "E-commerce") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "E-commerce"
+      );
+      setAllProducts(filteredProducts);
+    }
+    if (category === "Movie") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Movie"
+      );
+      setAllProducts(filteredProducts);
+    }
+    if (category === "Mini") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Mini"
+      );
+      setAllProducts(filteredProducts);
+    }
+  }, [category]);
+
+  return (
+    <section id="work" className="work">
+      <Container>
+        <Row>
+          <Col lg="12" >
+            <h1 className="page__title">Work</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg="12">
+            <div className="work__category mt-4">
+              <button
+                className={`all__btn ${
+                  category === "ALL" ? "workBtnActive" : ""
+                }`}
+                onClick={() => setCategory("ALL")}
+              >
+                All
+              </button>
+              <button
+                className={`all__btn ${
+                  category === "E-commerce" ? "workBtnActive" : ""
+                }`}
+                onClick={() => setCategory("E-commerce")}
+              >
+                E-commerce
+              </button>
+
+              <button
+                className={`all__btn ${
+                  category === "Movie" ? "workBtnActive" : ""
+                }`}
+                onClick={() => setCategory("Movie")}
+              >
+                Movie
+              </button>
+
+              <button
+                className={`all__btn ${
+                  category === "Mini" ? "workBtnActive" : ""
+                }`}
+                onClick={() => setCategory("Mini")}
+              >
+                Mini
+              </button>
+            </div>
+          </Col>
+          {allProducts.map((item, index) => (
+            <Col  lg="4" md="6" sm="12" xs="12" className="mt-5" key={item.id}>
+              <WorkCard item={item} key={index}/>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+export default Work;

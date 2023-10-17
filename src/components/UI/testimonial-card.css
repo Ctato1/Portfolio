@@ -1,0 +1,30 @@
+.about__item {
+  margin: 15px;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 10px;
+  height: 160px;
+  width: 400px;
+}
+.about__img img {
+  display: flex;
+  margin: auto;
+  width: 60px;
+  padding-bottom: 4px;
+}
+.about__item .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.slick-slider .slick-dots li button:before {
+  color: #9d9c9c !important;
+  transition:.3s ease-in-out;
+  transform: scale(1.4);
+  
+}
+.slick-slider .slick-dots li button:hover::before{
+    color: #fff !important;
+    transform: scale(1.1);
+}
