@@ -2,13 +2,15 @@ import { useState } from "react";
 import "./work-card.css";
 import Loading from "../Loading/Loading";
 
-const WorkCard = ({ item }) => {
+import { motion } from "framer-motion";
+
+const WorkCard = ({ item ,animation}) => {
   const [isLoading, setIsLoading] = useState(true);
   const handleImageLoad = () => {
     setIsLoading(false);
   };
   return (
-    <div className="product__item">
+    <motion.div className="product__item" animate={animation}>
       {isLoading && <Loading />}
       <div>
         <div className="product__img">
@@ -25,7 +27,7 @@ const WorkCard = ({ item }) => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

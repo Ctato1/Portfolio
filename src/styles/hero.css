@@ -1,4 +1,5 @@
 .hero {
+  height: 50em;
 }
 .row__section {
   display: flex;

@@ -1,4 +1,7 @@
-
+.work{
+overflow: hidden;
+padding: 110px 0px;
+}
 
 .work__category{
     width: 100%;
@@ -51,4 +54,18 @@
         font-size: .7rem;
     
     }
+}
+@media only screen and (max-width: 269px){
+    .work__category{
+        gap: .2rem;
+    }
+    .work__category .all__btn{
+        padding: 1px 5px;
+        font-size: .6rem;
+    
+    }
+    .page__title{
+        font-size: 1.4rem;
+    }
+
 }

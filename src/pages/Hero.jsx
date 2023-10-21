@@ -9,7 +9,7 @@ const Hero = () => {
   const [isImage, setIsImage] = useState(true);
 
   return (
-    <section className="hero mt-5 py-5">
+    <section className="hero mt-5 py-5" >
       <Container>
         <Row className="row__section">
           <Col lg="9" md='7'>
