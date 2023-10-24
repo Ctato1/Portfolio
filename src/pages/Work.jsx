@@ -6,7 +6,6 @@ import products from "../assets/data/work-data";
 import WorkCard from "../components/UI/WorkCard";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
-import { motion } from "framer-motion";
 
 const Work = () => {
   const [category, setCategory] = useState("ALL");
@@ -57,7 +56,7 @@ const Work = () => {
         y: "70%",
       });
     }
-  }, [inView]);
+  }, [inView,animation]);
 
   return (
     <section id="work" className="work" ref={ref}>
