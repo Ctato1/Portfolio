@@ -29,7 +29,7 @@ const About = () => {
       });
     }
 
-  }, [inView]);
+  }, [inView,animation]);
 
   return (
     <section id="about" className="about" >
