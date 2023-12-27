@@ -69,7 +69,7 @@ const Header = () => {
                       Resume
                     </Button>
                   </a>
-                  <a href="https://github.com/Ctato1" target="_blank">
+                  <a href="https://github.com/Ctato1" target="_blank" rel="noreferrer">
                     <Button className="btn git__btn" variant="outline-info">
                       GitHub
                     </Button>

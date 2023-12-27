@@ -2,7 +2,6 @@ import wineLine from "../images/work/wine.jpg";
 import movie from "../images/work/movie.jpg";
 import recipe from "../images/work/recipe.jpg";
 import restaurant from "../images/work/restaurant.jpg";
-import weather from "../images/work/weather.jpg";
 import calculator from "../images/work/calculator.jpg";
 import tipCalculator from "../images/work/tip-calculator.jpg";
 
