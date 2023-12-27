@@ -1,8 +1,8 @@
-import { Container, Row} from "reactstrap";
+import { Container, Row } from "reactstrap";
 import Logo from "../../assets/images/logo.png";
-import './header.css'
+import "./header.css";
 
-import {  useRef } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import toast from "react-hot-toast";
@@ -27,7 +27,6 @@ const Header = () => {
     },
   ];
   const logoRef = useRef(null);
-
 
   const barRef = useRef(null);
   const navLinkRef = useRef(null);
@@ -55,7 +54,7 @@ const Header = () => {
               }}
               ref={logoRef}
             >
-              <img src={Logo} alt="Logo" className="w-50"  />
+              <img src={Logo} alt="Logo" className="w-50" />
             </div>
             <div className="nav-res" ref={navLinkRef} onClick={toggleBar}>
               <div className="nav-links" ref={navLinkRef}>
@@ -64,15 +63,19 @@ const Header = () => {
                     {nav.title}
                   </a>
                 ))}
-                 <div className="header-resume">
-                <a href={CV} download="CV" onClick={downloaded}>
-                  <Button className="btn" variant="outline-info">
-                    Resume
-                  </Button>
-                </a>
+                <div className="header-resume">
+                  <a href={CV} download="CV" onClick={downloaded}>
+                    <Button className="btn" variant="outline-info">
+                      Resume
+                    </Button>
+                  </a>
+                  <a href="https://github.com/Ctato1" target="_blank">
+                    <Button className="btn git__btn" variant="outline-info">
+                      GitHub
+                    </Button>
+                  </a>
+                </div>
               </div>
-              </div>
-             
             </div>
 
             <div className="bar-links" ref={barRef} onClick={toggleBar}>

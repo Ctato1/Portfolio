@@ -3,6 +3,8 @@ import movie from "../images/work/movie.jpg";
 import recipe from "../images/work/recipe.jpg";
 import restaurant from "../images/work/restaurant.jpg";
 import weather from "../images/work/weather.jpg";
+import calculator from "../images/work/calculator.jpg";
+import tipCalculator from "../images/work/tip-calculator.jpg";
 
 const workData = [
   {
@@ -41,12 +43,21 @@ const workData = [
   },
   {
     id: "05",
-    title: "Weather",
-    imgUrl: weather,
+    title: "Calculator",
+    imgUrl: calculator,
     category: "Mini",
-    shortDesc: `Weather app - Check the weather`,
-    website: `https://ctato1.github.io/weather-app/`,
+    shortDesc: `Calculator app - Responsive`,
+    website: `https://ctato1.github.io/responsive-calculator/`,
   },
+  {
+    id: "06",
+    title: "TIP-Calculator",
+    imgUrl: tipCalculator,
+    category: "Mini",
+    shortDesc: `Tip Calculator - Responsive`,
+    website: `https://ctato1.github.io/tip-calculator/`,
+  },
+  
 ];
 
 export default workData;

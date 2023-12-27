@@ -36,7 +36,7 @@ const Work = () => {
   }, [category]);
 
   const { ref, inView } = useInView({
-    threshold:.293
+    threshold: 0.293,
   });
   const animation = useAnimation();
   useEffect(() => {
@@ -56,14 +56,14 @@ const Work = () => {
         y: "70%",
       });
     }
-  }, [inView,animation]);
+  }, [inView, animation]);
 
   return (
     <section id="work" className="work" ref={ref}>
       <Container>
         <Row>
           <Col lg="12">
-            <h1 className="page__title" >Work</h1>
+            <h1 className="page__title">Work</h1>
           </Col>
         </Row>
         <Row>
@@ -106,10 +106,9 @@ const Work = () => {
             </div>
           </Col>
           {allProducts.map((item, index) => (
-            <Col lg="4" md="6" sm="6" xs="12" className="mt-5" key={item.id} >
-              <div >
-       
-                <WorkCard item={item} key={index} animation={animation}/>
+            <Col lg="4" md="6" sm="6" xs="12" className="mt-5" key={item.id}>
+              <div>
+                <WorkCard item={item} key={index} animation={animation} />
               </div>
             </Col>
           ))}
