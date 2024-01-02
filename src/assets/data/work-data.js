@@ -19,8 +19,8 @@ const workData = [
     title: "Movie",
     imgUrl: movie,
     category: "Movie",
-    shortDesc: `Movie Website - Watch Trailer`,
-    website: `https://movie-app-react.pages.dev/home`,
+    shortDesc: `Movie Website - Entertainment`,
+    website: `https://entertainment-o5vp.vercel.app/home`,
   },
   {
     id: "03",
