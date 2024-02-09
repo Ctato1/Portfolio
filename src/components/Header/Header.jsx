@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import Button from "react-bootstrap/Button";
 
-import CV from "../CV/TATO-CV.pdf";
+import CV from "../CV/Tato-CV.pdf";
 
 const Header = () => {
   const nav__links = [
