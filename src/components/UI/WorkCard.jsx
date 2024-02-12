@@ -10,9 +10,9 @@ const WorkCard = ({ item ,animation}) => {
     setIsLoading(false);
   };
   return (
-    <motion.div className="product__item" animate={animation}>
+    <motion.div animate={animation}>
       {isLoading && <Loading />}
-      <div>
+      <div className="product__item" >
         <div className="product__img">
           <img src={item.imgUrl}  alt={item.title} onLoad={handleImageLoad} />
         </div>

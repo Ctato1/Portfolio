@@ -36,13 +36,13 @@ const Work = () => {
   }, [category]);
 
   const { ref, inView } = useInView({
-    threshold: 0.293,
+    threshold: 0.223,
   });
   const animation = useAnimation();
   useEffect(() => {
     if (inView) {
       animation.start({
-        y: 0,
+        y: -10,
         transition: {
           type: "spring",
           duration: 3,
@@ -52,7 +52,12 @@ const Work = () => {
     }
     if (!inView) {
       animation.start({
-        y: "70%",
+        y: "80%",
+        transition: {
+          type: "spring",
+          duration: 3,
+          bounce: 0.7,
+        },
       });
     }
   }, [inView, animation]);
