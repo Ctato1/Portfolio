@@ -44,14 +44,11 @@ const About = () => {
             <Col lg="12">
               <motion.div
                 className="about_desc"
-                // initial={{opacity:0.3,scale:0.3,y:600}}
-                // whileInView={{opacity:1,scale:1,y:0}}
-                // transition={{duration:.7}}
                 animate={animation}
               >
                 My name is Tato Dznelashvili. I’m a frontend software engineer &
                 freelance web developer in Georgia. I'm passionate about music,
-                technology and helathy life Whether you're a business owner
+                technology and healthy life, Whether you're a business owner
                 looking to get started on web development project with a
                 freelance web developer, a developer looking to collaborate on
                 something cool, or just wanting to say hi, shoot me a message

@@ -4,6 +4,8 @@ import recipe from "../images/work/recipe.jpg";
 import restaurant from "../images/work/restaurant.jpg";
 import calculator from "../images/work/calculator.jpg";
 import tipCalculator from "../images/work/tip-calculator.jpg";
+import audiophile from "../images/work/audiophile.jpg";
+import movie2 from "../images/work/movie2.jpg";
 
 const workData = [
   {
@@ -12,7 +14,7 @@ const workData = [
     imgUrl: wineLine,
     category: "E-commerce",
     shortDesc: `E-COMMERCE web store - Buy Wine`,
-    website: `https://wine-line.pages.dev/home`,
+    website: `https://wine-line.pages.dev/`,
   },
   {
     id: "02",
@@ -20,7 +22,7 @@ const workData = [
     imgUrl: movie,
     category: "Movie",
     shortDesc: `Movie Website - Entertainment`,
-    website: `https://entertainment-o5vp.vercel.app/home`,
+    website: `https://entertainment-o5vp.vercel.app/`,
   },
   {
     id: "03",
@@ -30,7 +32,7 @@ const workData = [
     shortDesc: `Recipe Hub - Search your favorite food`,
     description: `The grapes are cultivated in protected 
         designations of origin`,
-    website: `https://recipe-react-host.pages.dev/home`,
+    website: `https://recipe-react-host.pages.dev/`,
   },
   {
     id: "04",
@@ -38,7 +40,7 @@ const workData = [
     imgUrl: restaurant,
     category: "E-commerce",
     shortDesc: `Food Delivery - Order food now`,
-    website: `https://restaurant-a18.pages.dev/home`,
+    website: `https://restaurant-a18.pages.dev/`,
   },
   {
     id: "05",
@@ -56,7 +58,22 @@ const workData = [
     shortDesc: `Tip Calculator - Responsive`,
     website: `https://ctato1.github.io/tip-calculator/`,
   },
-  
+  {
+    id: "07",
+    title: "audiophile",
+    imgUrl: audiophile,
+    category: "E-commerce",
+    shortDesc: `E-COMMERCE web store - Buy Headsets`,
+    website: `https://audiophile-tato.vercel.app/`,
+  },
+  {
+    id: "08",
+    title: "Movie - Trailers",
+    imgUrl: movie2,
+    category: "Movie",
+    shortDesc: `Movie Website - Entertainment`,
+    website: `https://4e68534b.movie-app-react.pages.dev/`,
+  },
 ];
 
 export default workData;
