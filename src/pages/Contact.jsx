@@ -4,12 +4,13 @@ import { useRef } from "react";
 import toast from "react-hot-toast";
 
 import "../styles/contact.css";
+
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(form.current);
     emailjs
       .sendForm(
         `${process.env.REACT_APP_SERVICE_ID_API}`,
@@ -18,10 +19,8 @@ const Contact = () => {
         `${process.env.REACT_APP_PUBLIC_KEY_API}`
       )
       .then(
-        (result) => {
-          console.log(result);
+        () => {
           form.current.reset();
-
           toast.success("Successfully sent!", {
             style: {
               borderRadius: "10px",
