@@ -10,7 +10,6 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(form.current);
     emailjs
       .sendForm(
         `${process.env.REACT_APP_SERVICE_ID_API}`,
