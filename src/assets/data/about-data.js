@@ -3,7 +3,7 @@ const aboutData = [
     id: "01",
     title: "HTML",
     imgUrl: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
-    experience: `2 year of experience`,
+    experience: `3 year of experience`,
     color: "orange",
   },
   {
@@ -11,7 +11,7 @@ const aboutData = [
     title: "CSS",
     imgUrl:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png",
-    experience: `2 year of experience`,
+    experience: `3 year of experience`,
     color: "blue",
   },
   {
@@ -19,7 +19,7 @@ const aboutData = [
     title: "SASS",
     imgUrl:
       "https://logos-download.com/wp-content/uploads/2016/09/Sass_logo.png",
-    experience: `1 year of experience`,
+    experience: `2 year of experience`,
     color: "pink",
   },
   {
@@ -27,7 +27,7 @@ const aboutData = [
     title: "Javascript",
     imgUrl:
       "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-    experience: `2 year of experience`,
+    experience: `3 year of experience`,
     color: "yellow",
   },
   {
@@ -35,7 +35,7 @@ const aboutData = [
     title: "React",
     imgUrl:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-    experience: `2 year of experience`,
+    experience: `3 year of experience`,
     color: "lightblue",
   },
   {
@@ -43,7 +43,7 @@ const aboutData = [
     title: "Redux",
     imgUrl:
       "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
-    experience: `1 year of experience`,
+    experience: `2 year of experience`,
     color: "purple",
   },
   {
@@ -69,6 +69,22 @@ const aboutData = [
       "https://assets.super.so/726844e5-a1cb-4f61-85b9-4d8c282724f6/images/e73e37d6-3b70-4de5-8531-fe494615069b/spline_logo.png",
     experience: `1 year of experience`,
     color: "rgba(0, 89, 255, 0.607)",
+  },
+  {
+    id: "10",
+    title: "TypeScript",
+    imgUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+    experience: `1 year of experience`,
+    color: "lightblue",
+  },
+  {
+    id: "11",
+    title: "Tailwind CSS",
+    imgUrl:
+      "https://www.svgrepo.com/show/333609/tailwind-css.svg",
+    experience: `1 year of experience`,
+    color: "#c1c1c1",
   },
 ];
 

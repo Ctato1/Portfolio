@@ -6,6 +6,8 @@ import calculator from "../images/work/calculator.jpg";
 import tipCalculator from "../images/work/tip-calculator.jpg";
 import audiophile from "../images/work/audiophile.jpg";
 import movie2 from "../images/work/movie2.jpg";
+import github from "../images/work/github.png";
+import todo from "../images/work/todo.jpg";
 
 const workData = [
   {
@@ -73,6 +75,22 @@ const workData = [
     category: "Movie",
     shortDesc: `Movie Website - Entertainment`,
     website: `https://4e68534b.movie-app-react.pages.dev/`,
+  },
+  {
+    id: "09",
+    title: "Github - Users",
+    imgUrl: github,
+    category: "Mini",
+    shortDesc: `GitHub - Find user`,
+    website: `https://github-user-ctato1.vercel.app/`,
+  },
+  {
+    id: "10",
+    title: "Todo - App",
+    imgUrl: todo,
+    category: "Mini",
+    shortDesc: `Todo - Add plans`,
+    website: `https://todo-ctato1.vercel.app/`,
   },
 ];
 
