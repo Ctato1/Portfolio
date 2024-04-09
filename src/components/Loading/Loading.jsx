@@ -1,7 +1,7 @@
-import { CSSProperties } from "react";
-import CircleLoader from "react-spinners/CircleLoader";
 
-const override: CSSProperties = {
+import PuffLoader from "react-spinners/PuffLoader";
+
+const override = {
   display: "block",
   margin: "auto",
   borderColor: "red",
@@ -15,7 +15,7 @@ function Loading() {
   return (
     <div className="sweet-loading">
 
-      <CircleLoader
+      <PuffLoader
         color={color}
         loading={loading}
         cssOverride={override}
