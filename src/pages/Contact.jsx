@@ -7,13 +7,13 @@ import "../styles/contact.css";
 
 const Contact = () => {
   const form = useRef();
-  
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID_API,
-        process.env.REACT_APP_TEMPLATE_ID_API,
+        'service_fuo11sg',
+        'template_08aii2l',
         form.current,
         'OoJfzT5GhswGej3Rz'
       )
