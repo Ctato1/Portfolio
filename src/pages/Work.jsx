@@ -5,7 +5,7 @@ import "../styles/work.css";
 import products from "../assets/data/work-data";
 import WorkCard from "../components/UI/WorkCard";
 import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import { useAnimation,motion } from "framer-motion";
 
 const Work = () => {
   const [category, setCategory] = useState("ALL");
@@ -33,16 +33,22 @@ const Work = () => {
       );
       setAllProducts(filteredProducts);
     }
+    if (category === "Managment") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Managment"
+      );
+      setAllProducts(filteredProducts);
+    }
   }, [category]);
 
   const { ref, inView } = useInView({
-    threshold: 0.223,
+    threshold: 0.123,
   });
   const animation = useAnimation();
   useEffect(() => {
     if (inView) {
       animation.start({
-        y: -10,
+        y: -5,
         transition: {
           type: "spring",
           duration: 3,
@@ -52,7 +58,7 @@ const Work = () => {
     }
     if (!inView) {
       animation.start({
-        y: "80%",
+        y: "90%",
         transition: {
           type: "spring",
           duration: 3,
@@ -60,7 +66,7 @@ const Work = () => {
         },
       });
     }
-  }, [inView, animation]);
+  }, [inView]);
 
   return (
     <section id="work" className="work" ref={ref}>
@@ -71,49 +77,57 @@ const Work = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg="12">
-            <div className="work__category mt-4">
-              <button
-                className={`all__btn ${
-                  category === "ALL" ? "workBtnActive" : ""
-                }`}
-                onClick={() => setCategory("ALL")}
-              >
-                All
-              </button>
-              <button
-                className={`all__btn ${
-                  category === "E-commerce" ? "workBtnActive" : ""
-                }`}
-                onClick={() => setCategory("E-commerce")}
-              >
-                E-commerce
-              </button>
+          <div className="work__category mt-4">
+            <button
+              className={`all__btn ${
+                category === "ALL" ? "workBtnActive" : ""
+              }`}
+              onClick={() => setCategory("ALL")}
+            >
+              All
+            </button>
+            <button
+              className={`all__btn ${
+                category === "E-commerce" ? "workBtnActive" : ""
+              }`}
+              onClick={() => setCategory("E-commerce")}
+            >
+              E-commerce
+            </button>
 
-              <button
-                className={`all__btn ${
-                  category === "Movie" ? "workBtnActive" : ""
-                }`}
-                onClick={() => setCategory("Movie")}
-              >
-                Movie
-              </button>
+            <button
+              className={`all__btn ${
+                category === "Movie" ? "workBtnActive" : ""
+              }`}
+              onClick={() => setCategory("Movie")}
+            >
+              Movie
+            </button>
 
-              <button
-                className={`all__btn ${
-                  category === "Mini" ? "workBtnActive" : ""
-                }`}
-                onClick={() => setCategory("Mini")}
-              >
-                Mini
-              </button>
-            </div>
-          </Col>
+            <button
+              className={`all__btn ${
+                category === "Mini" ? "workBtnActive" : ""
+              }`}
+              onClick={() => setCategory("Mini")}
+            >
+              Mini
+            </button>
+            <button
+              className={`all__btn ${
+                category === "Managment" ? "workBtnActive" : ""
+              }`}
+              onClick={() => setCategory("Managment")}
+            >
+              Managment
+            </button>
+          </div>
+        </Row>
+        <Row>
           {allProducts.map((item, index) => (
             <Col lg="4" md="6" sm="6" xs="12" className="mt-5" key={item.id}>
-              <div>
-                <WorkCard item={item} key={index} animation={animation} />
-              </div>
+              <motion.div animate={animation}>
+                <WorkCard item={item} key={index} />
+              </motion.div>
             </Col>
           ))}
         </Row>

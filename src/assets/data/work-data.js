@@ -1,3 +1,4 @@
+import feedback from "../images/work/feedback.jpg";
 import wineLine from "../images/work/wine.jpg";
 import movie from "../images/work/movie.jpg";
 import recipe from "../images/work/recipe.jpg";
@@ -10,6 +11,14 @@ import github from "../images/work/github.png";
 import todo from "../images/work/todo.jpg";
 
 const workData = [
+  {
+    id: "00",
+    title: "Feedback",
+    imgUrl: feedback,
+    category: "Managment",
+    shortDesc: `Managment app - Create Feedback`,
+    website: `https://team-2-gules.vercel.app/`,
+  },
   {
     id: "01",
     title: "Wine-Line",
@@ -88,10 +97,11 @@ const workData = [
     id: "10",
     title: "Todo - App",
     imgUrl: todo,
-    category: "Mini",
+    category: "Managment",
     shortDesc: `Todo - Add plans`,
     website: `https://todo-ctato1.vercel.app/`,
   },
+
 ];
 
 export default workData;
