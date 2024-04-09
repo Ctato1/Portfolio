@@ -7,7 +7,7 @@ import "../styles/contact.css";
 
 const Contact = () => {
   const form = useRef();
-
+  
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -15,7 +15,7 @@ const Contact = () => {
         process.env.REACT_APP_SERVICE_ID_API,
         process.env.REACT_APP_TEMPLATE_ID_API,
         form.current,
-        process.env.REACT_APP_PUBLIC_KEY_API
+        'OoJfzT5GhswGej3Rz'
       )
       .then(
         () => {
